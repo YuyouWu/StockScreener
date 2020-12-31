@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import { Menu, Segment } from 'semantic-ui-react';
 
-export default function NavBar() {
-    const [activeItem, setActiveItem] = useState('home');
+export default function NavBar(props) {
 
     return (
         <div>
@@ -15,13 +13,13 @@ export default function NavBar() {
                 <Menu inverted pointing secondary>
                     <Menu.Item
                         name='home'
-                        active={activeItem === 'home'}
-                        onClick={() => setActiveItem('home')}
+                        href="/"
+                        active={props.page === 'home'}
                     />
                     <Menu.Item
                         name='about'
-                        active={activeItem === 'about'}
-                        onClick={() => setActiveItem('about')}
+                        href="/about"
+                        active={props.page === 'about'}
                     />
                 </Menu>
             </Segment>
