@@ -1,11 +1,12 @@
 import 'semantic-ui-css/semantic.min.css'
-import NavBar from '../components/NavBar';
+import Layout from '../components/Layout';
 
 export default function Home() {
 	return (
-		<div>
-			<NavBar page="home"/>
-			Home Page
-		</div>
+		<Layout>
+			<div>
+				Home Page
+			</div>
+		</Layout>
 	)
 }

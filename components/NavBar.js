@@ -1,6 +1,8 @@
 import { Menu, Segment } from 'semantic-ui-react';
+import { useRouter } from 'next/router'
 
-export default function NavBar(props) {
+export default function NavBar() {
+    const router = useRouter();
 
     return (
         <div>
@@ -14,12 +16,12 @@ export default function NavBar(props) {
                     <Menu.Item
                         name='home'
                         href="/"
-                        active={props.page === 'home'}
+                        active={router.route === '/'}
                     />
                     <Menu.Item
                         name='about'
                         href="/about"
-                        active={props.page === 'about'}
+                        active={router.route === '/about'}
                     />
                 </Menu>
             </Segment>
